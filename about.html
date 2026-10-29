@@ -3,20 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products - Walmart</title>
+
+    <title>About Us - Walmart</title>
+
+    <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Walmart</a>
 
+  <body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+      <div class="container">
+        <!-- Walmart Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="Images/logo.png" alt="Walmart Logo" class="walmart-logo" />
+        </a>
+
+        <!-- Mobile Menu -->
         <button
           class="navbar-toggler"
           type="button"
@@ -29,105 +44,227 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">
-                Home
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">
+                About
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
+              <a class="nav-link" href="products.html"> Products </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="contact.html"> Contact Us </a>
             </li>
           </ul>
-
-          <!-- Search Bar -->
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
-    <section class="container my-5">
-      <h1 class="text center mb-4">About Us</h1>
+
+    <!-- About Us Section -->
+    <section class="container my-5 py-4">
+      <div class="text-center mb-5">
+        <h1 class="fw-bold">About Us</h1>
+        <p class="text-muted">
+          Learn more about our Walmart-inspired shopping website.
+        </p>
+      </div>
 
       <div class="row justify-content-center">
-        <div class="col-12 col-md-8 text-center">
-          <h3>Welcome to Walmart</h3>
-          <p class="lead">
-            Welcome to our Walmart-inspired demo shopping website. Explore a
-            variety of products, including electronics, sports equipment, and
-            home accessories.
-          </p>
-          <p>
-            This website was developed as an educational project using HTML,
-            CSS, and Bootstrap 5. Our goal is to provide a simple and
-            user-friendly shopping experience.
-          </p>
-          <a href="products.html" class="btn btn-primary"> Explore Products </a>
+        <div class="col-12 col-lg-9">
+          <div class="card border-0 shadow-sm rounded-3">
+            <div class="card-body p-4 p-md-5 text-center">
+              <div class="display-4 text-primary mb-3">
+                <i class="bi bi-shop"></i>
+              </div>
+
+              <h2 class="fw-bold mb-4">Welcome to Walmart</h2>
+
+              <p class="lead text-muted">
+                Welcome to our Walmart-inspired demo shopping website. Explore a
+                variety of products, including electronics, sports equipment,
+                and home accessories.
+              </p>
+
+              <p class="text-muted">
+                This website was developed as an educational project using HTML,
+                CSS, and Bootstrap 5. Our goal is to provide a simple and
+                user-friendly shopping experience.
+              </p>
+
+              <a href="products.html" class="btn btn-primary px-4 py-2 mt-3">
+                Explore Products
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <br />
-    <footer id="contact" class="bg-dark text-white text-center py-4 mt-5">
-      <div class="container">
-        <h4>Walmart</h4>
-        <p>Your one-stop shop for everything.</p>
-
-        <h5 id="about">About Us</h5>
-        <p>We provide quality products at affordable prices.</p>
-
-        <h5>Connect with Us</h5>
-        <p>
-          <a
-            href="https://www.instagram.com/walmart/"
-            class="text-white me-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Instagram</a
-          >
-          <a
-            href="https://www.facebook.com/walmart"
-            class="text-white me-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Facebook</a
-          >
-          <a
-            href="https://www.linkedin.com/company/walmart/"
-            class="text-white me-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
+    <!-- Why Choose Us -->
+    <section class="container my-5 pb-5">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">What We Offer</h2>
+        <p class="text-muted">
+          A simple shopping experience with a variety of products.
         </p>
-        <hr />
-        <p class="mb-0">&copy; 2026 Walmart Demo Website. Project 1</p>
+      </div>
+
+      <div class="row g-4 text-center">
+        <!-- Product Variety -->
+        <div class="col-12 col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-3">
+            <div class="card-body p-4">
+              <i class="bi bi-bag-check display-5 text-primary"></i>
+
+              <h5 class="fw-bold mt-3">Product Variety</h5>
+
+              <p class="text-muted mb-0">
+                Explore electronics, sports accessories, and everyday
+                essentials.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Affordable Products -->
+        <div class="col-12 col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-3">
+            <div class="card-body p-4">
+              <i class="bi bi-tags display-5 text-primary"></i>
+
+              <h5 class="fw-bold mt-3">Affordable Products</h5>
+
+              <p class="text-muted mb-0">
+                Browse products across different categories and price ranges.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Easy Navigation -->
+        <div class="col-12 col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-3">
+            <div class="card-body p-4">
+              <i class="bi bi-phone display-5 text-primary"></i>
+
+              <h5 class="fw-bold mt-3">Easy Navigation</h5>
+
+              <p class="text-muted mb-0">
+                Enjoy a clean, responsive website designed for desktop and
+                mobile.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Walmart Footer Logo -->
+          <div class="col-12 col-md-4">
+            <a href="index.html">
+              <img
+                src="Images/logo.png"
+                alt="Walmart Logo"
+                class="footer-logo mb-3"
+              />
+            </a>
+
+            <p class="text-white-50">Your one-stop shop for everything.</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3">Quick Links</h5>
+
+            <p>
+              <a href="index.html" class="text-white text-decoration-none">
+                Home
+              </a>
+            </p>
+
+            <p>
+              <a href="about.html" class="text-white text-decoration-none">
+                About Us
+              </a>
+            </p>
+
+            <p>
+              <a href="products.html" class="text-white text-decoration-none">
+                Products
+              </a>
+            </p>
+
+            <p>
+              <a href="contact.html" class="text-white text-decoration-none">
+                Contact Us
+              </a>
+            </p>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3">Connect With Us</h5>
+
+            <div class="d-flex gap-4">
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/walmart/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white fs-3"
+                aria-label="Instagram"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/walmart"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white fs-3"
+                aria-label="Facebook"
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/company/walmart/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white fs-3"
+                aria-label="LinkedIn"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <p class="text-center text-white-50 mb-0">
+          &copy; 2026 Walmart Demo Website. Project 1
+        </p>
       </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

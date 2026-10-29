@@ -3,20 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Products - Walmart</title>
+
+    <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Walmart</a>
 
+  <body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+      <div class="container">
+        <!-- Walmart Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="Images/logo.png" alt="Walmart Logo" class="walmart-logo" />
+        </a>
+
+        <!-- Mobile Menu Button -->
         <button
           class="navbar-toggler"
           type="button"
@@ -29,186 +44,286 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">
-                Home
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="products.html"
+              >
+                Products
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="contact.html"> Contact Us </a>
             </li>
           </ul>
-
-          <!-- Search Bar -->
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
-    <!-- Products Section -->
-    <div id="products" class="container my-5">
-      <h2 class="text-center mb-4">Our Products</h2>
 
+    <!-- Products Section -->
+    <section id="products" class="container my-5 py-4">
+      <div class="text-center mb-5">
+        <h1 class="fw-bold">Our Products</h1>
+        <p class="text-muted">
+          Explore our collection of electronics, sports accessories, and
+          everyday essentials.
+        </p>
+      </div>
+
+      <!-- Product Grid -->
       <div class="row g-4">
-        <!-- Product 1 -->
-        <div class="col-12 col-md-4">
-          <div class="card h-100 rounded-1">
+        <!-- Product 1: Wireless Headphones -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-3">
             <img
               src="Images/Headphone.jpg"
-              class="card-img-top"
+              class="card-img-top product-image"
               alt="Wireless Headphones"
             />
 
-            <div class="card-body" style="background-color: rgb(225, 247, 247)">
-              <h5 class="card-title">Wireless Headphones</h5>
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">Wireless Headphones</h5>
 
-              <p class="card-text">Bluetooth wireless headphones.</p>
+              <p class="card-text text-muted">Bluetooth wireless headphones.</p>
 
-              <p>Price: $199</p>
+              <h5 class="text-primary fw-bold mt-auto mb-3">$199</h5>
 
-              <button class="btn btn-primary" type="button">Add to Cart</button>
+              <button class="btn btn-primary w-100" type="button">
+                <i class="bi bi-cart-plus me-2"></i>
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card h-100">
-            <img src="Images/PC.jpg" class="card-img-top" alt="pc" />
-            <div class="card-body" style="background-color: rgb(225, 247, 247)">
-              <h5 class="card-title">Nvidia</h5>
-              <p class="card-text">Nvidia GeForce GTX</p>
-              <p>Price: $1000</p>
-              <button class="btn btn-primary" type="button">Add to Cart</button>
+
+        <!-- Product 2: Nvidia -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-3">
+            <img
+              src="Images/PC.jpg"
+              class="card-img-top product-image"
+              alt="Nvidia GeForce GTX"
+            />
+
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">Nvidia</h5>
+
+              <p class="card-text text-muted">Nvidia GeForce GTX.</p>
+
+              <h5 class="text-primary fw-bold mt-auto mb-3">$1000</h5>
+
+              <button class="btn btn-primary w-100" type="button">
+                <i class="bi bi-cart-plus me-2"></i>
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card h-100">
+
+        <!-- Product 3: Keyboard -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-3">
             <img
               src="Images/Keyboard.jpg"
-              class="card-img-top"
-              alt="keyboard"
+              class="card-img-top product-image"
+              alt="Gaming Keyboard"
             />
-            <div class="card-body" style="background-color: rgb(225, 247, 247)">
-              <h5 class="card-title">Keyboard</h5>
-              <p class="card-text">Gaming Keyboard</p>
-              <p>Price: $40</p>
-              <button class="btn btn-primary" type="button">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
 
-      <div class="row g-4">
-        <!--Product 4-->
-        <div class="col-12 col-md-4">
-          <div class="card h-100">
-            <img src="Images/ball.jpg" class="card-img-bottom" alt="ball" />
-            <div class="card-body" style="background-color: rgb(225, 247, 247)">
-              <h5 class="card-title">Basketball</h5>
-              <p class="card-text">Wilson NBA Ball</p>
-              <p>Price: $140</p>
-              <button class="btn btn-primary" type="button">Add to Cart</button>
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">Keyboard</h5>
+
+              <p class="card-text text-muted">Gaming Keyboard.</p>
+
+              <h5 class="text-primary fw-bold mt-auto mb-3">$40</h5>
+
+              <button class="btn btn-primary w-100" type="button">
+                <i class="bi bi-cart-plus me-2"></i>
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card h-100">
+
+        <!-- Product 4: Basketball -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-3">
+            <img
+              src="Images/ball.jpg"
+              class="card-img-top product-image"
+              alt="Wilson NBA Basketball"
+            />
+
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">Basketball</h5>
+
+              <p class="card-text text-muted">Wilson NBA Ball.</p>
+
+              <h5 class="text-primary fw-bold mt-auto mb-3">$140</h5>
+
+              <button class="btn btn-primary w-100" type="button">
+                <i class="bi bi-cart-plus me-2"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: Study Table -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-3">
             <img
               src="Images/Study table.jpg"
-              class="card-img-bottom"
-              alt="study table"
+              class="card-img-top product-image"
+              alt="Electric Study Table"
             />
-            <div
-              class="card-body"
-              style="background-color: rgb(225, 247, 247)";>
-              <h5 class="card-title">Study table</h5>
-              <p class="card-text">Electric Study Table</p>
-              <p>Price: $2000</p>
-              <button class="btn btn-primary" type="button">Add to Cart</button>
+
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">Study Table</h5>
+
+              <p class="card-text text-muted">Electric Study Table.</p>
+
+              <h5 class="text-primary fw-bold mt-auto mb-3">$2000</h5>
+
+              <button class="btn btn-primary w-100" type="button">
+                <i class="bi bi-cart-plus me-2"></i>
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card h-100">
+
+        <!-- Product 6: Nike Basketball Shoes -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-3">
             <img
               src="Images/Shoes.jpg"
-              class="card-img-bottom"
-              alt="shoes"
-         style="height:420px"
+              class="card-img-top product-image"
+              alt="Nike Book 1 Basketball Shoes"
             />
-            <div class="card-body" style="background-color: rgb(225, 247, 247)" >
-              <h5 class="card-title">Nike Basketball Shoes</h5>
-              <p class="card-text">Nike Book 1s</p>
-              <p>Price: $150</p>
-              <button class="btn btn-primary" type="button">Add to Cart</button>
+
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">Nike Basketball Shoes</h5>
+
+              <p class="card-text text-muted">Nike Book 1s.</p>
+
+              <h5 class="text-primary fw-bold mt-auto mb-3">$150</h5>
+
+              <button class="btn btn-primary w-100" type="button">
+                <i class="bi bi-cart-plus me-2"></i>
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <br />
-    <footer id="contact" class="bg-dark text-white text-center py-4 mt-5">
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
       <div class="container">
-        <h4>Walmart</h4>
-        <p>Your one-stop shop for everything.</p>
+        <div class="row g-4">
+          <!-- Footer Logo -->
+          <div class="col-12 col-md-4">
+            <a href="index.html">
+              <img
+                src="Images/logo.png"
+                alt="Walmart Logo"
+                class="footer-logo mb-3"
+              />
+            </a>
 
-        <h5 id="about">About Us</h5>
-        <p>We provide quality products at affordable prices.</p>
+            <p class="text-white-50">Your one-stop shop for everything.</p>
+          </div>
 
-        <h5>Connect with Us</h5>
-        <p>
-          <a
-            href="https://www.instagram.com/walmart/"
-            class="text-white me-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Instagram</a
-          >
-          <a
-            href="https://www.facebook.com/walmart"
-            class="text-white me-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Facebook</a
-          >
-          <a
-            href="https://www.linkedin.com/company/walmart/"
-            class="text-white me-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
+          <!-- Quick Links -->
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3">Quick Links</h5>
+
+            <p>
+              <a href="index.html" class="text-white text-decoration-none">
+                Home
+              </a>
+            </p>
+
+            <p>
+              <a href="about.html" class="text-white text-decoration-none">
+                About Us
+              </a>
+            </p>
+
+            <p>
+              <a href="products.html" class="text-white text-decoration-none">
+                Products
+              </a>
+            </p>
+
+            <p>
+              <a href="contact.html" class="text-white text-decoration-none">
+                Contact Us
+              </a>
+            </p>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3">Connect With Us</h5>
+
+            <div class="d-flex gap-4">
+              <a
+                href="https://www.instagram.com/walmart/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white fs-3"
+                aria-label="Instagram"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a
+                href="https://www.facebook.com/walmart"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white fs-3"
+                aria-label="Facebook"
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/walmart/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white fs-3"
+                aria-label="LinkedIn"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <p class="text-center text-white-50 mb-0">
+          &copy; 2026 Walmart Demo Website. Project 1
         </p>
-        <hr />
-        <p class="mb-0">&copy; 2026 Walmart Demo Website. Project 1</p>
       </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

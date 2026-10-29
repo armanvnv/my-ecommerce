@@ -3,20 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products - Walmart</title>
+
+    <title>Contact Us - Walmart</title>
+
+    <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Walmart</a>
 
+  <body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+      <div class="container">
+        <!-- Walmart Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="Images/logo.png" alt="Walmart Logo" class="walmart-logo" />
+        </a>
+
+        <!-- Mobile Menu Button -->
         <button
           class="navbar-toggler"
           type="button"
@@ -29,126 +44,223 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">
-                Home
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="products.html"> Products </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="contact.html"
+              >
+                Contact Us
               </a>
             </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
           </ul>
-
-          <!-- Search Bar -->
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
-    <section class="container my-5">
-      <h1 class="text-center mb-4">Contact Us</h1>
+
+    <!-- Contact Us Section -->
+    <section class="container my-5 py-4">
+      <!-- Section Heading -->
+      <div class="text-center mb-5">
+        <h1 class="fw-bold">Contact Us</h1>
+
+        <p class="text-muted">Have a question? We'd love to hear from you.</p>
+      </div>
+
       <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
-          <p class="text-center">Have a question? Send us a message!</p>
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label"> Full Name </label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="Enter your name"
-                required
-              />
+        <div class="col-12 col-md-8 col-lg-6">
+          <!-- Contact Form Card -->
+          <div class="card border-0 shadow-sm rounded-3">
+            <div class="card-body p-4 p-md-5">
+              <!-- Contact Icon -->
+              <div class="text-center mb-4">
+                <i class="bi bi-envelope-paper display-4 text-primary"></i>
+
+                <h3 class="fw-bold mt-3">Send Us a Message</h3>
+
+                <p class="text-muted">
+                  Fill out the form below to get in touch.
+                </p>
+              </div>
+
+              <!-- Contact Form -->
+              <form>
+                <!-- Full Name -->
+                <div class="mb-4">
+                  <label for="name" class="form-label fw-bold">
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+
+                <!-- Email Address -->
+                <div class="mb-4">
+                  <label for="email" class="form-label fw-bold">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                </div>
+
+                <!-- Message -->
+                <div class="mb-4">
+                  <label for="message" class="form-label fw-bold">
+                    Your Message
+                  </label>
+
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Type your message here..."
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Send Button -->
+                <button type="button" class="btn btn-primary btn-lg w-100">
+                  <i class="bi bi-send me-2"></i>
+                  Send Message
+                </button>
+
+                <!-- Demo Notice -->
+                <p class="text-muted text-center small mt-3 mb-0">
+                  Demo form only — messages are not sent yet.
+                </p>
+              </form>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label"> Email Address </label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label"> Your Message </label>
-              <textarea
-                class="form-control"
-                id="message"
-                rows="4"
-                placeholder="Type your message here"
-                required
-              ></textarea>
-            </div>
-            <button type="button" class="btn btn-primary">Send Message</button>
-          </form>
+          </div>
         </div>
       </div>
     </section>
 
-    <br />
-    <footer id="contact" class="bg-dark text-white text-center py-4 mt-5">
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
       <div class="container">
-        <h4>Walmart</h4>
-        <p>Your one-stop shop for everything.</p>
+        <div class="row g-4">
+          <!-- Footer Logo -->
+          <div class="col-12 col-md-4">
+            <a href="index.html">
+              <img
+                src="Images/logo.png"
+                alt="Walmart Logo"
+                class="footer-logo mb-3"
+              />
+            </a>
 
-        <h5 id="about">About Us</h5>
-        <p>We provide quality products at affordable prices.</p>
+            <p class="text-white-50">Your one-stop shop for everything.</p>
+          </div>
 
-        <h5>Connect with Us</h5>
-        <p>
-          <a
-            href="https://www.instagram.com/walmart/"
-            class="text-white me-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Instagram</a
-          >
-          <a
-            href="https://www.facebook.com/walmart"
-            class="text-white me-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Facebook</a
-          >
-          <a
-            href="https://www.linkedin.com/company/walmart/"
-            class="text-white me-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
+          <!-- Quick Links -->
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3">Quick Links</h5>
+
+            <p>
+              <a href="index.html" class="text-white text-decoration-none">
+                Home
+              </a>
+            </p>
+
+            <p>
+              <a href="about.html" class="text-white text-decoration-none">
+                About Us
+              </a>
+            </p>
+
+            <p>
+              <a href="products.html" class="text-white text-decoration-none">
+                Products
+              </a>
+            </p>
+
+            <p>
+              <a href="contact.html" class="text-white text-decoration-none">
+                Contact Us
+              </a>
+            </p>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3">Connect With Us</h5>
+
+            <div class="d-flex gap-4">
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/walmart/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white fs-3"
+                aria-label="Instagram"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/walmart"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white fs-3"
+                aria-label="Facebook"
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/company/walmart/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white fs-3"
+                aria-label="LinkedIn"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <p class="text-center text-white-50 mb-0">
+          &copy; 2026 Walmart Demo Website. Project 1
         </p>
-        <hr />
-        <p class="mb-0">&copy; 2026 Walmart Demo Website. Project 1</p>
       </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
